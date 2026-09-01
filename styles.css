@@ -1,0 +1,235 @@
+.leetify-container {
+  margin: 12px 0;
+}
+
+.leetify-card {
+  background: #121212;
+  border: 1px solid #D4AF37;
+  border-radius: 8px;
+  padding: 12px 16px 14px;
+  color: #c9c9c9;
+  font-family: "Motiva Sans", Arial, sans-serif;
+  font-size: 13px;
+  max-width: 652px;
+  box-sizing: border-box;
+}
+
+/* Required by Leetify's guidelines: bold + underline + their pink, all
+   three, so it's unambiguous as their link regardless of surrounding
+   theme. */
+.nova-view-on-leetify {
+  color: #F84982;
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+
+/* ---- Player name / status row ---- */
+
+.leetify-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 15px;
+  color: #E8E8E8;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+
+.leetify-card__header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.leetify-card__banned {
+  color: #E0483B;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.leetify-card__section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9A9A9A;
+  margin: 12px 0 8px;
+  padding-top: 10px;
+  border-top: 1px solid #3a3a3a;
+}
+
+/* ---- Stat tiles ---- */
+
+.leetify-card__tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.leetify-tile {
+  flex: 1 1 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 10px 6px;
+  border-radius: 6px;
+  text-align: center;
+  background: #1a1a1a;
+  border: 1px solid #6b5a1f;
+}
+
+.leetify-tile--flagged {
+  background: #2a1414;
+  border-color: #E0483B;
+}
+
+.leetify-tile--flagged .leetify-tile__value {
+  color: #FF6B5C;
+}
+
+.leetify-tile--flagged .leetify-tile__label {
+  color: #C97A72;
+}
+
+.leetify-tile__value {
+  color: #F2F2F2;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.leetify-tile__label {
+  color: #9A9A9A;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* ---- Platform: one floating box, rows divided internally ---- */
+
+.nova-platform {
+  margin-top: 2px;
+}
+
+.nova-platform-box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  background: #1a1a1a;
+  border: 1px solid #6b5a1f;
+  overflow: hidden;
+}
+
+.nova-platform-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  font-size: 12.5px;
+  gap: 10px;
+}
+
+.nova-platform-row + .nova-platform-row {
+  border-top: 1px solid #3a3a3a;
+}
+
+.nova-platform-row__label {
+  color: #D9D9D9;
+  font-weight: 600;
+  flex: 0 0 84px;
+}
+
+.nova-platform-row__body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.nova-platform-row__body--center {
+  justify-content: center;
+  gap: 6px;
+}
+
+.nova-platform-row__body--split {
+  justify-content: space-around;
+}
+
+.nova-platform-row__body--empty {
+  justify-content: center;
+}
+
+.nova-platform-col {
+  display: flex;
+  justify-content: center;
+}
+
+.nova-premier-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nova-premier-value {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.nova-rank-icon {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+.nova-rank-fallback {
+  color: #5a5a5a;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.nova-premier-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ---- Footer: contact link (left) + Leetify badge (right) ---- */
+
+.nova-footer {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #3a3a3a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.leetify-card__feedback-link {
+  color: #9A9A9A;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.leetify-card__feedback-link:hover {
+  color: #D4AF37;
+  text-decoration: underline;
+}
+
+.nova-leetify-badge {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.nova-leetify-badge img {
+  height: 52px;
+  width: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.leetify-card--loading .leetify-card__body,
+.leetify-card--error .leetify-card__body {
+  color: #9A9A9A;
+}
